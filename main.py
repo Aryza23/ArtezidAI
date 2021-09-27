@@ -69,4 +69,3 @@ async def start(_, message):
 
 
 kuki.run()
-run.until.disconect()
