@@ -44,7 +44,8 @@ async def kukiai(client: Client, message: Message):
 
 
 messageprivate = '''
-Hi, I'm Kuki Chat Bot 
+Hi, I'm Spike AI ChatBot, Im bot can talk with you .
+please join @idzeroidsupport
 '''
 
 messagegroup = '''
