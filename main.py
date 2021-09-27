@@ -1,4 +1,4 @@
-##Credit: moezilla 
+## credit moezilla 
 
 from pyrogram.types import (
   Message, 
@@ -35,7 +35,7 @@ async def kukiai(client: Client, message: Message):
 
   Kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
 
-  kuki1 = requests.get(f"https://kuki-api.tk/api/message=hi").json()
+  kuki1 =   requests.get(f"https://kuki-api.tk/api/message=hi").json()
 
   idz = f"{Kuki1['reply']}"
       
