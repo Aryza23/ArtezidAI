@@ -39,9 +39,11 @@ async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =  requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
+  Kuki =  requests.get(f"https://kuki-api.tk/api/message=hi").json()
 
-  idz = f"{Kuki['reply']}"
+  Kuki1 =   requests.get(f"https://kuki-api.tk/api/testeraichatbot/IdzXartez/message={msg}").json()
+
+  idz = f"{Kuki1['reply']}"
       
   await client.send_chat_action(message.chat.id, "typing")
   await message.reply_text(idz)
