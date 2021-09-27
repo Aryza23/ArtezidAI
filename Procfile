@@ -1,1 +1,1 @@
-Idz: python3 ai
+Idz: python3 main.py
