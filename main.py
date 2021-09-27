@@ -5,7 +5,7 @@ from pyrogram import filters, Client
 import requests
 import os
 import re
-import asyncio
+
 
 API_ID = os.environ.get("API_ID", None) 
 API_HASH = os.environ.get("API_HASH", None) 
@@ -56,11 +56,8 @@ async def start(_, message):
     self = await kuki.get_me()
     busername = self.username
     if message.chat.type != "public":
-      memek = await message.reply_text("⚡️")
-      await memek.edit("Hello Im Online Now")
-      await asyncio.sleep(3)
-      await memek.edit("❄️)
-      await message.delete()
+      await message.reply_text("messagegroup")
+
 
 
 kuki.run()
