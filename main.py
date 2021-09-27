@@ -28,10 +28,18 @@ kuki = Client(
     group=2,
 )
 async def kukiai(client: Client, message: Message):
+  if not message.reply_to_message:
+        return
+    try:
+        pro = message.reply_to_message.from_user.id
+    except:
+        return
+    if pro != BOT_ID:
+        return
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =  requests.get(f"https://kuki-api.tk/api/message=hi").json()
+  Kuki =  requests.get(f"https://kuki-api.tk/api/tersteraichatbot/idzxartez/message={msg}").json()
 
   idz = f"{Kuki['reply']}"
       
