@@ -41,11 +41,11 @@ async def kukiai(client: Client, message: Message):
 
 
 messageprivate = '''
-Hi, I'm kuki Chat Bot
+Hi, I'm Online 
 '''
 
 messagegroup = '''
-Hi, I'm kuki Chat Bot
+Hi, I'm Online 
 '''
 
 
