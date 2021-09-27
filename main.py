@@ -28,22 +28,12 @@ kuki = Client(
     group=2,
 )
 async def kukiai(client: Client, message: Message):
-  if not message.reply_to_message:
-        return
-    try:
-        pro = message.reply_to_message.from_user.id
-    except:
-        return
-    if pro != BOT_ID:
-        return
   msg = message.text
   chat_id = message.chat.id
 
   Kuki =  requests.get(f"https://kuki-api.tk/api/message=hi").json()
 
-  Kuki1 =   requests.get(f"https://kuki-api.tk/api/testeraichatbot/IdzXartez/message={msg}").json()
-
-  idz = f"{Kuki1['reply']}"
+  idz = f"{Kuki['reply']}"
       
   await client.send_chat_action(message.chat.id, "typing")
   await message.reply_text(idz)
