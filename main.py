@@ -31,8 +31,7 @@ async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =   requests.get(f"https://kuki-api.tk/api/testeraichatbot/IdzXartez/message={msg}").json()
-  Kuki1 =  requests.get(f"https://kuki-api.tk/api/message=hi").json()
+  Kuki =  requests.get(f"https://kuki-api.tk/api/message=hi").json()
 
   idz = f"{Kuki['reply']}"
       
@@ -53,7 +52,7 @@ Hi, I'm kuki Chat Bot
 
 
 
-@kuki.on_message(filters.command("repo"))
+@kuki.on_message(filters.command("start"))
 async def start(_, message):
     self = await kuki.get_me()
     busername = self.username
