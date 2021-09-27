@@ -42,9 +42,6 @@ async def kukiai(client: Client, message: Message):
 
 
 
-messageprivate = '''
-⚡️ 
-'''
 
 messagegroup = '''
 ⚡️ 
@@ -54,12 +51,12 @@ messagegroup = '''
 
 
 
-@kuki.on_message(filters.command("alive"))
+@kuki.on_message(filters.command("start"))
 async def start(_, message):
     self = await kuki.get_me()
     busername = self.username
     if message.chat.type != "public":
-      memek = await message.reply_text(messagegroup)
+      memek = await message.reply_text("⚡️")
       await memek.edit("Hello Im Online Now")
 
 
