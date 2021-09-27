@@ -33,7 +33,7 @@ async def kukiai(client: Client, message: Message):
 
   Kuki =  requests.get(f"https://kuki-api.tk/api/message=hi").json()
 
-  Kuki =   requests.get(f"https://kuki-api.tk/api/testeraichatbot/IdzXartez/message={msg}").json()
+  Kuki1 =   requests.get(f"https://kuki-api.tk/api/testeraichatbot/IdzXartez/message={msg}").json()
 
   idz = f"{Kuki['reply']}"
       
