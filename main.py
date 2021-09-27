@@ -41,11 +41,11 @@ async def kukiai(client: Client, message: Message):
 
 
 messageprivate = '''
-Hi, I'm Online 
+⚡️ 
 '''
 
 messagegroup = '''
-Hi, I'm Online 
+⚡️ 
 '''
 
 
@@ -62,7 +62,7 @@ async def start(_, message):
     else:
         buttons = [[InlineKeyboardButton("Github", url="https://github.com/idzero23/ArtezidAI"),
                     ]]
-        await message.reply_text(messageprivate, reply_markup=InlineKeyboardMarkup(buttons))
+        await message.reply_text(messagegroup, reply_markup=InlineKeyboardMarkup(buttons))
 
 
 
