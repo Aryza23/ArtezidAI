@@ -1,3 +1,5 @@
+##Credit: moezilla 
+
 from pyrogram.types import (
   Message, 
 )
@@ -33,18 +35,20 @@ async def kukiai(client: Client, message: Message):
 
   Kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
 
-  moezilla = f"{Kuki['reply']}"
+  kuki1 = requests.get(f"https://kuki-api.tk/api/message=hi").json()
+
+  idz = f"{Kuki1['reply']}"
       
   await client.send_chat_action(message.chat.id, "typing")
-  await message.reply_text(moezilla)
+  await message.reply_text(idz)
 
 
 messageprivate = '''
-Hi, I'm Kuki Chat Bot
+Hi, I'm Kuki Chat Bot 
 '''
 
 messagegroup = '''
-Hi, I'm Kuki Chat Bot
+⚡️
 '''
 
 
@@ -59,7 +63,7 @@ async def start(_, message):
         await message.reply_text(messagegroup)
         return
     else:
-        buttons = [[InlineKeyboardButton("Github", url="https://github.com/MoeZilla/KukiChatBot"),
+        buttons = [[InlineKeyboardButton("Github", url="https://github.com/idzero23/ArtezidAI"),
                     ]]
         await message.reply_text(messageprivate, reply_markup=InlineKeyboardMarkup(buttons))
 
