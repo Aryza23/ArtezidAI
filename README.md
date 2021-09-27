@@ -7,7 +7,7 @@
 </p>
 
 ## Found Me At telegram
-* As @spike_sbot
+* As [spike_sbot](https://t.me/spkie_sbot)
 
 ### Deploy To Heroku 📡</h4>
 
