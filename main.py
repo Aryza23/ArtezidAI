@@ -28,32 +28,23 @@ kuki = Client(
     group=2,
 )
 async def kukiai(client: Client, message: Message):
-  if not message.reply_to_message:
-        return
-    try:
-        pro = message.reply_to_message.from_user.id
-    except:
-        return
-    if pro != BOT_ID:
-        return
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =  requests.get(f"https://kuki-api.tk/api/tersteraichatbot/idzxartez/message={msg}").json()
+  Kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
 
-  idz = f"{Kuki['reply']}"
+  moezilla = f"{Kuki['reply']}"
       
   await client.send_chat_action(message.chat.id, "typing")
-  await message.reply_text(idz)
-
+  await message.reply_text(moezilla)
 
 
 messageprivate = '''
-⚡️ 
+Hi, I'm Kuki Chat Bot
 '''
 
 messagegroup = '''
-⚡️ 
+Hi, I'm Kuki Chat Bot
 '''
 
 
@@ -64,13 +55,13 @@ messagegroup = '''
 async def start(_, message):
     self = await kuki.get_me()
     busername = self.username
-    if message.chat.type != "public":
+    if message.chat.type != "private":
         await message.reply_text(messagegroup)
         return
     else:
-        buttons = [[InlineKeyboardButton("Github", url="https://github.com/idzero23/ArtezidAI"),
+        buttons = [[InlineKeyboardButton("Github", url="https://github.com/MoeZilla/KukiChatBot"),
                     ]]
-        await message.reply_text(messagegroup, reply_markup=InlineKeyboardMarkup(buttons))
+        await message.reply_text(messageprivate, reply_markup=InlineKeyboardMarkup(buttons))
 
 
 
