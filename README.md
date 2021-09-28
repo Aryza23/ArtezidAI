@@ -7,7 +7,7 @@
 </p>
 
 ## Found Me At telegram
-* As [spike_sbot](https://t.me/spkie_sbot)
+* As [Aries](https://t.me/idzeroid_bot)
 
 ### Deploy To Heroku 📡</h4>
 
